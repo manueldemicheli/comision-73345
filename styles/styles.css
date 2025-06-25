@@ -10,10 +10,10 @@ background-color: gray;
 margin: 0;
 padding: 0;
 height: 100%;
-
 }
 
 header{
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,6 +21,10 @@ header{
     padding-left: 40px;
     background-color: #000000;
     color: #5CBDE8;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
 }
 
 header h1{
@@ -42,7 +46,8 @@ header nav ul  {
 /* Pagina Inicio/Index */
 
 
-.imagenportada {
+ .imagenportada {
+  
     height: 400px;         /* altura fija */
     overflow: hidden;
     margin-top: 15px;
@@ -56,6 +61,8 @@ header nav ul  {
     object-fit: cover;
     display: block;
 }
+
+
 
 
 
@@ -93,26 +100,45 @@ main {
 }
 
 
-
 /* Pagina Contacto*/
 
 .contacto {
-
   display: flex;
   flex-direction: column;
-  align-items: center;       /* centra los elementos hijos horizontalmente */
-  margin: 0 auto;            /* centra el contenedor en el body */
+  align-items: center;
+  margin: 0 auto;
   padding: 20px;
-  width: 90%;
+  width: 100%;           /* 🔹 Se adapta al 100% del ancho disponible */
   max-width: 600px;
+  min-height: 100vh;
+  box-sizing: border-box; /* 🔹 Asegura que el padding no sume al ancho total */
+}
 
+.contacto img {
+  width: 100%;            /* 🔹 La imagen nunca se pasa del ancho del contenedor */
+  height: auto;           /* 🔹 Mantiene proporciones */
+  max-width: 100%;        /* 🔹 Asegura que no se desborde */
 }
 
 .contacto section {
-
   margin-top: 20px;
-  
+  width: 100%;            /* 🔹 Para que el texto también respete el ancho */
+  text-align: center;     /* (Opcional) para centrar el texto */
 }
+
+/* 🔹 Media query para pantallas chicas */
+
+@media (max-width: 480px) {
+  .contacto {
+    padding: 10px; /* Menos espacio en los bordes */
+  }
+
+  .contacto section p {
+    font-size: 1rem; /* Tamaño de texto más amigable en móvil */
+  }
+}
+
+
 
 /* Pagina Preguntas Frecuenets*/
 
@@ -138,6 +164,16 @@ main {
     margin: 0 auto;
 
 }
+
+@media (max-width: 480px) {
+  .mainpreguntasfrecuentes img {
+    height: auto;           /* 🔹 Deja que se ajuste a su contenido */
+    max-height: 300px;      /* 🔹 Un límite razonable en móviles */
+    padding: 5px;           /* 🔹 Menos padding para aprovechar el espacio */
+  }
+}
+
+
 
 
 /* Pagina Ingreso*/
@@ -252,3 +288,4 @@ main {
   color: white;
 
 }
+
