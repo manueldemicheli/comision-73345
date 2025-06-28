@@ -45,10 +45,9 @@ header nav ul  {
 
 /* Pagina Inicio/Index */
 
-
  .imagenportada {
   
-    height: 400px;         /* altura fija */
+    height: 400px;        
     overflow: hidden;
     margin-top: 15px;
     padding: 0;
@@ -108,33 +107,32 @@ main {
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  width: 100%;           /* 🔹 Se adapta al 100% del ancho disponible */
+  width: 100%;           
   max-width: 600px;
   min-height: 100vh;
-  box-sizing: border-box; /* 🔹 Asegura que el padding no sume al ancho total */
+  box-sizing: border-box; 
 }
 
 .contacto img {
-  width: 100%;            /* 🔹 La imagen nunca se pasa del ancho del contenedor */
-  height: auto;           /* 🔹 Mantiene proporciones */
-  max-width: 100%;        /* 🔹 Asegura que no se desborde */
+  width: 100%;           
+  height: auto;           
+  max-width: 100%;       
 }
 
 .contacto section {
   margin-top: 20px;
-  width: 100%;            /* 🔹 Para que el texto también respete el ancho */
-  text-align: center;     /* (Opcional) para centrar el texto */
+  width: 100%;            
+  text-align: center;     
 }
 
-/* 🔹 Media query para pantallas chicas */
 
 @media (max-width: 480px) {
   .contacto {
-    padding: 10px; /* Menos espacio en los bordes */
+    padding: 10px;
   }
 
   .contacto section p {
-    font-size: 1rem; /* Tamaño de texto más amigable en móvil */
+    font-size: 1rem;
   }
 }
 
@@ -156,7 +154,7 @@ main {
     display: block;
     width: auto;
     max-width: 100%;
-    height: 50vh;        /* mitad de la altura de la ventana */
+    height: 50vh;      
     max-height: 50vh;
     padding: 10px;
     box-sizing: border-box;
@@ -167,9 +165,9 @@ main {
 
 @media (max-width: 480px) {
   .mainpreguntasfrecuentes img {
-    height: auto;           /* 🔹 Deja que se ajuste a su contenido */
-    max-height: 300px;      /* 🔹 Un límite razonable en móviles */
-    padding: 5px;           /* 🔹 Menos padding para aprovechar el espacio */
+    height: auto;           
+    max-height: 300px;      
+    padding: 5px;           
   }
 }
 
@@ -269,6 +267,7 @@ main {
 }
 
 /* Botón Crear cuenta fuera del form */
+
 .ingreso > section > input[type="submit"] {
 
   background-color: transparent;
