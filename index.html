@@ -20,19 +20,29 @@
 
     <header>
 
-        <h1>Malevo Wines</h1>
-
-        <nav>
-            <ul>
-                
-                <li><a href="#">Inicio</a></li>
-                <li><a href="./pages/preguntas frecuentes.html">Preguntas Frecuentes</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="./pages/ingresar.html">Ingresar</a></li>
-
-            </ul>
-
-        </nav>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand fadein" href="./index.html">Malevo Wine </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="./pages/ingresar.html">Ingresar</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="./pages/preguntas frecuentes.html">Preguntas Frecuentes</a>
+        </li>
+    </div>
+  </div>
+</nav>
 
     </header>
     
@@ -49,29 +59,32 @@
 
 
 <main>
-    <div class="imagenes">
+  <div class="imagenes">
+    <a href="seleccion.html" class="bloque">
+      <img src="./assets/seleccion.png" alt="selección">
+      <p>Selección</p>
+    </a>
 
-        <a href="#seleccion">
-            <img src="./assets/seleccion.png" alt="leyenda seleccion debajo de foto finca con transparencias">
-        </a>
+    <a href="packs-degustacion.html" class="bloque">
+      <img src="./assets/packs-egustacion.png" alt="packs degustación">
+      <p>Packs Degustación</p>
+    </a>
 
-        <a href="#packs-degustacion">
-            <img src="./assets/packs-egustacion.png" alt="leyenda packs degustacion debajo de foto finca con transparencias">
-        </a>
+    <a href="packs-premium.html" class="bloque">
+      <img src="./assets/packs-premium.png" alt="packs premium">
+      <p>Packs Premium</p>
+    </a>
 
-        <a href="#packs-premium">
-            <img src="./assets/packs-premium.png" alt="leyenda packs premium debajo de foto finca con transparencias">
-        </a>
+    <a href="nuestra-finca.html" class="bloque">
+      <img src="./assets/nuestra-finca.png" alt="nuestra finca">
+      <p>Nuestra Finca</p>
+    </a>
 
-        <a href="#nuestra-finca">
-            <img src="./assets/nuestra-finca.png" alt="leyenda nuestra finca debajo de foto finca con transparencias">
-        </a>
-
-        <a href="#capacitate">
-            <img src="./assets/capacitate-con-nosotros.png" alt="leyenda capacitate con nosotros debajo de foto finca con transparencias">
-        </a>
-
-    </div>
+    <a href="capacitate.html" class="bloque especial">
+      <img src="./assets/capacitate-con-nosotros.png" alt="capacitate con nosotros">
+      <p>Capacitate con Nosotros</p>
+    </a>
+  </div>
 </main>
 
 <footer class="bg-dark text-white py-4 mt-auto">
@@ -85,7 +98,7 @@
         <input type="email" class="form-control" id="newsletter" placeholder="Tu email">
       </div>
       <div class="col-auto">
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary btn-simple-anim">Enviar</button>
       </div>
     </form>
 
