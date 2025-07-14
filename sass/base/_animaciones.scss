@@ -1,0 +1,24 @@
+/* animaciones */
+
+.fadein {
+
+  opacity: 0;
+  animation: myanimation 2s forwards;
+
+}
+
+@keyframes myanimation {
+
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+
+}
+
+.btn-simple-anim {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-simple-anim:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}

@@ -1,0 +1,180 @@
+//import de variables
+
+@use "../abstratcs/mixins" as *;
+@use "../abstratcs/variables" as *;
+
+/* Header */
+
+header {
+  @include contorno(0, 0);
+  width: 100%;
+
+  .navbar {
+    @include contorno(0, 0);
+    width: 100%;
+
+    .container-fluid {
+      @include contorno(0, 0);
+      width: 100%;
+      background-color: $color-conteiner;
+
+      .navbar-brand {
+        color: $color-malevo;
+      }
+    }
+
+    .navbar-nav {
+      .nav-link {
+        color: $color-fuente;
+      }
+    }
+  }
+}
+
+/* Mobile (hasta 767px) */
+
+@media (max-width: $breakpoint-mobile) {
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-toggler {
+    &:focus,
+    &:active,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+/* Tablet (768px a 991px) */
+@media (min-width: 768px) and (max-width: $breakpoint-tablet) {
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-toggler {
+    &:focus,
+    &:active,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+/* contacto */
+
+.contacto {
+  @include flex;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 82vh;
+  box-sizing: border-box;
+
+img {
+
+  @include dimension(100%, auto);
+  max-width: 100%;
+
+}
+
+  section {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.redes-sociales {
+  text-align: center;
+  margin-top: 0;
+
+  a {
+    color: $color-malevo;
+    font-size: 2rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+}
+
+/* Mobile: hasta 767px */
+
+@media (max-width: $breakpoint-mobile) {
+  .contacto {
+    padding: 10px;
+
+    section {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* Tablet: 768px a 991px */
+
+@media (min-width: 768px) and (max-width: $breakpoint-tablet) {
+  .contacto {
+    padding: 15px 20px;
+
+    section {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+/* Footer */
+
+.btn-malevo {
+
+    background-color: $color-malevo !important;
+    color: $color-conteiner !important;
+
+}
+
+// Media Query Móviles (hasta 767px)
+@media (max-width: $breakpoint-mobile) {
+  footer form {
+    @include flex; 
+    gap: 10px;
+  }
+
+  footer .col-auto {
+    width: 90% !important;
+    max-width: 320px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  footer input,
+  footer button {
+    width: 100% !important;
+  }
+}
+
+// Media Query Tablets (768px a 991px)
+@media (min-width: 768px) and (max-width: $breakpoint-tablet) {
+  footer form {
+    @include flex; 
+    gap: 10px;
+  }
+
+  footer .col-auto {
+    width: 70% !important;
+    max-width: 320px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  footer input,
+  footer button {
+    width: 100% !important;
+  }
+}

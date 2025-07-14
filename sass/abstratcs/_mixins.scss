@@ -1,0 +1,33 @@
+//mixin con parametros
+
+@mixin grid ($grid, $columns, $rows, $gap) {
+
+    display: $grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+    
+}
+
+@mixin dimension ($widht, $height) {
+
+            width: $widht;
+            height: $height; 
+}
+
+@mixin contorno ($margin, $padding) {
+
+        margin: $margin;
+        padding: $padding;
+
+}
+
+//mixin sin parametros
+
+@mixin flex {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

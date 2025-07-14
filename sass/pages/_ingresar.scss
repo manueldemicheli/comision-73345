@@ -1,0 +1,232 @@
+//import de variables
+
+@use "../abstratcs/mixins" as *;
+@use "../abstratcs/variables" as *;
+
+
+/* Header */
+
+header {
+  @include contorno(0, 0);
+  width: 100%;
+
+  .navbar {
+    @include contorno(0, 0);
+    width: 100%;
+
+    .container-fluid {
+      @include contorno(0, 0);
+      width: 100%;
+      background-color: $color-conteiner;
+
+      .navbar-brand {
+        color: $color-malevo;
+      }
+    }
+
+    .navbar-nav {
+      .nav-link {
+        color: $color-fuente;
+      }
+    }
+  }
+}
+
+/* Mobile (hasta 767px) */
+
+@media (max-width: $breakpoint-mobile) {
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-toggler {
+    &:focus,
+    &:active,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+/* Tablet (768px a 991px) */
+@media (min-width: 768px) and (max-width: $breakpoint-tablet) {
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-toggler {
+    &:focus,
+    &:active,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+
+/* Ingresar */
+
+.ingreso {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+
+  section {
+    max-height: 50vh;
+    overflow-y: auto;
+    background: $color-fondoingreso;
+    padding: 20px;
+    width: 320px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    // Botón Crear cuenta fuera del form
+    > input[type="submit"] {
+      background-color: transparent;
+      color: $color-malevo;
+      border: 2px solid $color-malevo;
+      padding: 8px 0;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: $color-malevo;
+        color: $color-fuente;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid $color-ingresoimput;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: $color-malevo;
+      color: $color-fuente;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        background-color: $color-malevo; 
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+
+    a {
+      color: $color-malevo;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+body.page-ingreso {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main.ingreso {
+    flex: 1;
+  }
+}
+
+/* Mobile: hasta 767px */
+
+@media (max-width: $breakpoint-mobile) {
+  .ingreso {
+    padding: 10px;
+
+    section {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+}
+
+/* Tablet: 768px a 991px */
+
+@media (min-width: 768px) and (max-width: $breakpoint-tablet) {
+  .ingreso {
+    section {
+      width: 80%;
+    }
+  }
+}
+
+/* Footer */
+
+.btn-malevo {
+
+    background-color: $color-malevo !important;
+    color: $color-conteiner !important;
+
+}
+
+// Media Query Móviles (hasta 767px)
+@media (max-width: $breakpoint-mobile) {
+  footer form {
+    @include flex; 
+    gap: 10px;
+  }
+
+  footer .col-auto {
+    width: 90% !important;
+    max-width: 320px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  footer input,
+  footer button {
+    width: 100% !important;
+  }
+}
+
+// Media Query Tablets (768px a 991px)
+@media (min-width: 768px) and (max-width: $breakpoint-tablet) {
+  footer form {
+    @include flex; 
+    gap: 10px;
+  }
+
+  footer .col-auto {
+    width: 70% !important;
+    max-width: 320px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  footer input,
+  footer button {
+    width: 100% !important;
+  }
+}

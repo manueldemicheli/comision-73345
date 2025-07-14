@@ -1,0 +1,29 @@
+//import de variables
+
+@use "../abstratcs/mixins" as *;
+@use "../abstratcs/variables" as *;
+
+
+
+/* reset */
+
+*{
+
+    @include contorno (0%, 0%);
+     box-sizing: border-box;
+
+}
+
+/* estilos generales */
+
+html {
+
+    body {
+
+        background-color: $color-fondo;
+        @include contorno (0, 0);
+        height: 100%;
+
+    }
+
+}
